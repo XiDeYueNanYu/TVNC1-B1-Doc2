@@ -672,9 +672,9 @@
 const textContentData = [
     `THÔNG TIN CHO BẠN
 1. Thông tin về hải quan
-a. Hành lý
+a. Hành lý.
 Theo quy định của Hãng Hàng không, hành khách được phép mang hành lý mỗi người là 20kg (lượt đi cũng như lượt về). Nếu mang quá 20kg, phải tự trả phí quá cước (khoảng 6 USD/kg – tùy hãng hàng không).
-b. Hàng hóa và tiền tệ
+b. Hàng hóa và tiền tệ.
 Ngoại tệ (bao gồm tiền giấy, tiền kim loại và chéque du lịch) dưới 7.000 USD (hoặc ngoại tệ khác tương đương 7.000 USD) không cần khai báo.
 Tiền Đồng Việt Nam dưới 15.000.000₫ không cần khai báo. Tuy nhiên, hành khách không nên mang theo tiền Đồng Việt Nam vì sẽ không sử dụng được tại nước ngoài.
 Vàng trên 300gr (nếu là vàng trang sức thì ngoài số đeo trên người, số lượng mỗi loại quá 05 chiếc hoặc 05 bộ) phải xin phép Ngân hàng Nhà nước Việt Nam.
@@ -683,7 +683,7 @@ Tuyệt đối không mang theo nữ trang có giá trị lớn trên 3 ly (hộ
 Người nhập cảnh được miễn thuế không quá 1,5 lít rượu trên 22 độ và 2 lít rượu dưới 22 độ; 400 điếu thuốc lá; 100 điếu xì gà; 500 gram thuốc lá sợi.
 Các vật phẩm khác được mang theo khi nhập cảnh được miễn thuế trị giá không quá 5 triệu đồng Việt Nam.
 Người nhập cảnh mang theo hành lý vượt mức quy định nêu trên thì phải khai báo vào tờ khai (ký hiệu HQ/2002-PMD) và nộp thuế theo luật định.
-c. Thị thực
+c. Thị thực.
 Người xuất cảnh, nhập cảnh không có hàng hóa phải khai báo hải quan tại trang 4, 5 (dành cho khai báo hải quan) thì không phải khai.
 Công dân của những nước ký hiệp định song phương miễn thị thực với Việt Nam: Thái Lan, Philippines, Malaysia, Singapore, Indonesia và Lào; công dân Pháp mang hộ chiếu ngoại giao và công dân Chile mang hộ chiếu ngoại giao, hộ chiếu công vụ.
 Công dân những nước Việt Nam đơn phương miễn thị thực: 4 nước Bắc Âu (Thụy Điển, Na Uy, Đan Mạch, Phần Lan), Nhật Bản và Hàn Quốc. (Riêng Nhật Bản miễn thị thực cho công dân Việt Nam mang hộ chiếu ngoại giao, công vụ).
@@ -836,7 +836,7 @@ const quizData = [
 
             // Bước 1: Tìm và lưu trữ các cụm từ khớp
             sortedKeys.forEach(key => {
-                const regex = new RegExp(`(\\b|[.,!?\\n])(${key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})(\\b|[.,!?\\n])`, 'gi');
+                const regex = new RegExp(`(\\b|[.,!?\\n\\s]|^)(${key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})(\\b|[.,!?\\n\\s]|$)`, 'gi');
                 let match;
                 while ((match = regex.exec(html)) !== null) {
                     const start = match.index + match[1].length;
